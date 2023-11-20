@@ -12,7 +12,7 @@ jobs:
         name: Say hello
         shell: sh
         run: |
-          echo "hello world 2!"
+          echo "hello world 123!"
       - uses: cloudbees-io/checkout@v1
         name: Checkout
       - uses: docker://golang:1.20.3-alpine3.17
