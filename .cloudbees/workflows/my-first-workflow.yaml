@@ -21,7 +21,12 @@ jobs:
         shell: sh
         run: |
           cat version > $CLOUDBEES_OUTPUTS/version
-
+      - uses: my-gha-run
+        name: GHA-Run
+        with:
+          repo-name: platform_learning
+          branch-name: main
+          workflow-name: CI
     outputs:
       version: ${{ steps.compute-version.outputs.version }}
   deploy:
