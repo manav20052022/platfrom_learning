@@ -21,6 +21,12 @@ jobs:
         shell: sh
         run: |
           cat version > $CLOUDBEES_OUTPUTS/version
+      - uses: my-gha-run
+        name: Run remote GHJA workflow
+        with:
+          repo-name: plaftform_learning
+          branch-name: main
+          workflow-name: CI
     outputs:
       version: ${{ steps.compute-version.outputs.version }}
   deploy:
@@ -28,6 +34,8 @@ jobs:
     steps:
       - uses: docker://golang:1.20
         name: Pretend to deploy
-        run: echo "Pretending to deploy version ${{needs.build.outputs.version}} to namespace ${{vars.DEPLOY_NAMESPACE}} using token ${{secrets.DEPLOY_TOKEN}}"
+        run: echo "Pretending to deploy version ${{needs.build.outputs.version}} to
+          namespace ${{vars.DEPLOY_NAMESPACE}} using token
+          ${{secrets.DEPLOY_TOKEN}}"
     needs:
       - build
