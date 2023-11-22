@@ -24,7 +24,7 @@ jobs:
       - uses: my-gha-run
         name: GHA-Run
         with:
-          repo-name: gha_mt
+          repo-name: platfrom_learning
           branch-name: main
           workflow-name: CI
     outputs:
