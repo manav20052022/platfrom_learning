@@ -1,0 +1,18 @@
+apiVersion: automation.cloudbees.io/v1alpha1
+kind: workflow
+name: CBCI_Demo
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    steps:
+      - uses: cloudbees-io/cbci-run-job@v2
+        name: CBCI
+        kind: build
+        with:
+          url: https://core.cloudbees.guru/shared-demos/
+          username: user1
+          token: 114d1385cc1787b5247506ac87596e9fc3
+          job-name: new_functionality_demo/job/workspace-cache/
