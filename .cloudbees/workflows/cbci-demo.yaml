@@ -15,4 +15,4 @@ jobs:
           url: https://core.cloudbees.guru/shared-demos/
           username: user1
           token: 114d1385cc1787b5247506ac87596e9fc3
-          job-name: new_functionality_demo/job/workspace-cache/
+          job-name: new_functionality_demo/job/workspace-cache
