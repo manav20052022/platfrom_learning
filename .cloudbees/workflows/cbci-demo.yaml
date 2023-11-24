@@ -13,6 +13,6 @@ jobs:
         kind: build
         with:
           url: https://core.cloudbees.guru/shared-demos/
-          username: user1
+          username: admin
           token: 11cc312afd4535c611e3b656de50db2f18
           job-name: new_functionality_demo/job/workspace-cache/job/cache-off
