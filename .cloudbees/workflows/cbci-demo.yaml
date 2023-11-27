@@ -4,7 +4,7 @@ name: CBCI_Demo
 on:
   push:
     branches:
-      - main
+      - "**"
 jobs:
   build:
     steps:
@@ -14,5 +14,5 @@ jobs:
         with:
           url: https://core.cloudbees.guru/shared-demos/
           username: admin
-          token: 
+          token: ${{secrets.CBCI_Guru_Token}}
           job-name: new_functionality_demo/job/workspace-cache/job/cache-off
